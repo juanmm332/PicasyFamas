@@ -1,0 +1,6 @@
+@PicasyFamas_HostAddress = http://localhost:5019
+
+GET {{PicasyFamas_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

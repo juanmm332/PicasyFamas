@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Neutrals (dark navy theme) */
+    --background: 222 47% 7%;
+    --foreground: 210 40% 96%;
+
+    --card: 222 40% 11%;
+    --card-foreground: 210 40% 96%;
+
+    --popover: 222 40% 11%;
+    --popover-foreground: 210 40% 96%;
+
+    --muted: 222 30% 16%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 222 30% 16%;
+    --accent-foreground: 210 40% 96%;
+
+    --border: 222 25% 20%;
+    --input: 222 25% 20%;
+    --ring: 158 64% 45%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+
+    --radius: 0.875rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Ambient glow behind the game board */
+.app-glow {
+  background:
+    radial-gradient(60rem 40rem at 50% -10%, hsla(158, 64%, 45%, 0.16) 0%, transparent 60%),
+    radial-gradient(40rem 30rem at 85% 20%, hsla(199, 89%, 55%, 0.1) 0%, transparent 55%),
+    radial-gradient(40rem 30rem at 10% 30%, hsla(38, 92%, 55%, 0.08) 0%, transparent 55%);
+}
+
+.dotted-grid {
+  background-image: radial-gradient(circle, hsl(var(--foreground)) 1px, transparent 1px);
+  background-size: 26px 26px;
+  opacity: 0.04;
+}
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-pop-in {
+  animation: pop-in 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes float-up {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-float-up {
+  animation: float-up 0.4s ease-out both;
+}

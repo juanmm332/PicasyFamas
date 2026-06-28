@@ -1,0 +1,89 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\juanm\\source\\repos\\PicasyFamas\\PicasyFamas\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6B4F8A4C-FD58-94FC-CEF5-5CD108ACA611}|PicasyFamas.csproj|c:\\users\\juanm\\source\\repos\\picasyfamas\\picasyfamas\\controllers\\metricscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B4F8A4C-FD58-94FC-CEF5-5CD108ACA611}|PicasyFamas.csproj|solutionrelative:controllers\\metricscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B4F8A4C-FD58-94FC-CEF5-5CD108ACA611}|PicasyFamas.csproj|c:\\users\\juanm\\source\\repos\\picasyfamas\\picasyfamas\\datatransferobjects\\dashboardmetricsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B4F8A4C-FD58-94FC-CEF5-5CD108ACA611}|PicasyFamas.csproj|solutionrelative:datatransferobjects\\dashboardmetricsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B4F8A4C-FD58-94FC-CEF5-5CD108ACA611}|PicasyFamas.csproj|c:\\users\\juanm\\source\\repos\\picasyfamas\\picasyfamas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B4F8A4C-FD58-94FC-CEF5-5CD108ACA611}|PicasyFamas.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MetricsController.cs",
+              "DocumentMoniker": "C:\\Users\\juanm\\source\\repos\\PicasyFamas\\PicasyFamas\\Controllers\\MetricsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MetricsController.cs",
+              "ToolTip": "C:\\Users\\juanm\\source\\repos\\PicasyFamas\\PicasyFamas\\Controllers\\MetricsController.cs",
+              "RelativeToolTip": "Controllers\\MetricsController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAgwBUAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T21:56:36.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DashboardMetricsDto.cs",
+              "DocumentMoniker": "C:\\Users\\juanm\\source\\repos\\PicasyFamas\\PicasyFamas\\DataTransferObjects\\DashboardMetricsDto.cs",
+              "RelativeDocumentMoniker": "DataTransferObjects\\DashboardMetricsDto.cs",
+              "ToolTip": "C:\\Users\\juanm\\source\\repos\\PicasyFamas\\PicasyFamas\\DataTransferObjects\\DashboardMetricsDto.cs",
+              "RelativeToolTip": "DataTransferObjects\\DashboardMetricsDto.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAADwvyIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T21:55:29.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\juanm\\source\\repos\\PicasyFamas\\PicasyFamas\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\juanm\\source\\repos\\PicasyFamas\\PicasyFamas\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAuwGAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T19:27:34.575Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
