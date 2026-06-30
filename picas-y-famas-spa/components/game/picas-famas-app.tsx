@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react"
 import { toast } from "sonner"
-import { Target, LogOut, Loader2, Play, RotateCcw } from "lucide-react"
+import { Target, LogOut, Loader2, Play, RotateCcw, Gamepad2, BarChart3 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
   AlertDialog,
@@ -18,6 +18,7 @@ import { AuthScreen } from "@/components/game/auth-screen"
 import { GuessZone } from "@/components/game/guess-zone"
 import { HistoryTable } from "@/components/game/history-table"
 import { VictoryModal } from "@/components/game/victory-modal"
+import { MetricsDashboard } from "@/components/game/metrics-dashboard"
 import {
   ApiError,
   clearToken,
@@ -33,6 +34,7 @@ import {
 
 export function PicasFamasApp() {
   const [authed, setAuthed] = useState<boolean | null>(null)
+  const [view, setView] = useState<"game" | "dashboard">("game")
   const [gameId, setGameId] = useState<number | null>(null)
   const [history, setHistory] = useState<GuessRow[]>([])
   const [finished, setFinished] = useState(false)
@@ -182,7 +184,11 @@ export function PicasFamasApp() {
       <div className="app-glow pointer-events-none absolute inset-0" />
       <div className="dotted-grid pointer-events-none absolute inset-0" />
 
-      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-2xl flex-col px-4 py-8">
+      <div
+        className={`relative z-10 mx-auto flex min-h-screen w-full flex-col px-4 py-8 ${
+          view === "dashboard" ? "max-w-4xl" : "max-w-2xl"
+        }`}
+      >
         {/* Header */}
         <header className="mb-8 flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -199,7 +205,37 @@ export function PicasFamasApp() {
           </Button>
         </header>
 
-        {!hasActiveGame ? (
+        {/* Navegación entre vistas */}
+        <nav className="mb-6 inline-flex w-full gap-1 rounded-2xl border border-border bg-card p-1 sm:w-auto sm:self-start">
+          <button
+            type="button"
+            onClick={() => setView("game")}
+            aria-current={view === "game"}
+            className={`flex flex-1 items-center justify-center gap-2 rounded-xl px-5 py-2 text-sm font-semibold transition-colors sm:flex-none ${
+              view === "game"
+                ? "bg-primary text-primary-foreground"
+                : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            <Gamepad2 className="h-4 w-4" /> Juego
+          </button>
+          <button
+            type="button"
+            onClick={() => setView("dashboard")}
+            aria-current={view === "dashboard"}
+            className={`flex flex-1 items-center justify-center gap-2 rounded-xl px-5 py-2 text-sm font-semibold transition-colors sm:flex-none ${
+              view === "dashboard"
+                ? "bg-primary text-primary-foreground"
+                : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            <BarChart3 className="h-4 w-4" /> Dashboard
+          </button>
+        </nav>
+
+        {view === "dashboard" ? (
+          <MetricsDashboard onSessionError={handleSessionError} />
+        ) : !hasActiveGame ? (
           // No active game — start screen
           <div className="flex flex-1 flex-col items-center justify-center text-center animate-pop-in">
             <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-secondary">
