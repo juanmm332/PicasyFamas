@@ -53,6 +53,30 @@ export interface PersistedGame {
   finished: boolean
 }
 
+// ---------- Metrics / Dashboard (BONUS) ----------
+export interface UsersByDay {
+  day: string
+  count: number
+}
+
+export interface TopGame {
+  gameId: number
+  playerName: string
+  totalAttempts: number
+}
+
+export interface GameAttemptsDetail {
+  gameId: number
+  attemptsCount: number
+}
+
+export interface DashboardMetrics {
+  registrationsByDay: UsersByDay[]
+  top5ShortestGames: TopGame[]
+  attemptsPerGame: GameAttemptsDetail[]
+  averageAttemptsGlobal: number
+}
+
 // Custom error carrying the HTTP status and any parsed body.
 export class ApiError extends Error {
   status: number
@@ -187,6 +211,14 @@ export function sendGuess(gameId: number, number: string): Promise<GuessResponse
     method: "POST",
     auth: true,
     body: JSON.stringify({ number }),
+  })
+}
+
+// Fetches the consolidated dashboard metrics (BONUS section).
+export function getDashboardMetrics(): Promise<DashboardMetrics> {
+  return request<DashboardMetrics>("/api/Metrics/dashboard", {
+    method: "GET",
+    auth: true,
   })
 }
 
